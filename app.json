@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/page1/page",
+    "pages/page2/page",
+    "pages/page3/page",
+    "pages/page4/page",
+    "pages/page5/page",
+    "pages/page6/page",
+    "pages/page7/page",
+    "pages/order/page",
+    "pages/user/page",
+    "pages/subscribe/page"
+  ],
+  "window": {
+    "navigationBarTitleText": "预约家政服务",
+    "navigationBarBackgroundColor": "#09bb06"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "服务下单",
+      "iconPath": "images/1.png",
+      "selectedIconPath": "images/1-2.png"
+    }, {
+      "pagePath": "pages/order/page",
+      "text": "订单中心",
+      "iconPath": "images/2.png",
+      "selectedIconPath": "images/2-2.png"
+    }, {
+      "pagePath": "pages/user/page",
+      "text": "会员中心",
+      "iconPath": "images/3.png",
+      "selectedIconPath": "images/3-2.png"
+    }],
+    "color": "#000",
+    "selectedColor": "#09bb06",
+    "backgroundColor": "#fff"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

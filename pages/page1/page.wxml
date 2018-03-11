@@ -1,0 +1,26 @@
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <checkbox-group bindchange="checkboxChange">
+      <view class="item" wx:for="{{items}}">
+        <label>
+          <checkbox value="{{item.name}}" />
+          <image src="{{item.img}}"></image>
+          <view class="text">
+            <text class="title">{{item.name}}</text>
+            <text class="content">{{item.value}}</text>
+          </view>
+          <text class="price">预付定金：¥100.00</text>
+        </label>
+      </view>
+    </checkbox-group>
+    <view class="footer">
+      <view class="left">
+        预付定金：¥
+        <text> {{price}}</text>
+      </view>
+      <view class="right">
+        <button form-type="submit" disabled="{{disabled}}">提交</button>
+      </view>
+    </view>
+  </form>
+</view>
