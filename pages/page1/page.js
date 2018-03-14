@@ -1,5 +1,6 @@
 //获取应用实例
 const app = getApp()
+// console.log(app.globalData)
 
 Page({
   data: {
@@ -22,7 +23,7 @@ Page({
   },
   formSubmit: function(e) {
     wx.navigateTo({
-      url: "/pages/subscribe/page?price=" + this.data.item + this.data.price
+      url: "/pages/subscribe/page?price=" + this.data.price + "&item=" + this.data.item
     })
   },
   checkboxChange: function(e) {
@@ -32,6 +33,6 @@ Page({
       this.setData({disabled: true})
     }
     this.data.item = e.detail.value;
-    this.setData({ price: e.detail.value.length * 100 }) 
+    this.setData({ price: e.detail.value.length * 100 + ".00" }) 
   }
 })

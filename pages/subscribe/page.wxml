@@ -1,3 +1,37 @@
-<view>
-  {{text}}
+<view class="subscribe">
+  <form bindsubmit="formSubmit">
+    <view class='getUserAddr' bindtap='getUserAddr'>
+      <i class="iconfont icon-dizhi"></i>
+      <text>选择地址</text>
+    </view>
+    <view>
+      <text>联系人姓名：</text>
+      <input type="text" value="{{userName}}" placeholder="填写联系人姓名" />
+    </view>
+    <view>
+      <text>联系人电话：</text>
+      <input type="text" value="{{telNumber}}" placeholder="填写联系人电话" />
+    </view>
+    <view>
+      <text>联系人地址：</text>
+      <input type="text" value="{{userAddr}}" placeholder="填写联系人地址" />
+    </view>
+    <view>
+      <text>预约时间：</text>
+      <picker mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
+        <view class="picker">
+          {{date}}
+        </view>
+      </picker>
+      <picker mode="time" value="{{time}}" start="{{startTime}}" end="18:00" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time}}
+        </view>
+      </picker>
+    </view>
+    <view class="price">
+      预约订金：¥{{price}}
+    </view>
+    <button form-type="submit">立即预约</button>
+  </form>
 </view>
